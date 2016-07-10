@@ -17,7 +17,13 @@ Rails.application.routes.draw do
   get '/posts/new' => 'posts#new'
   post '/posts/new' => 'posts#create'
 
-  get '/posts/:id' => 'posts#show'
+  # post '/posts/index' => 'post#index'
+
+  get '/posts/index' => 'posts#index'
+  get '/posts/:id', to: 'posts#show', as: :post
+
+  delete '/posts/:id', to: 'posts#delete'
+  
 
 
 

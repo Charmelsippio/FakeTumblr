@@ -1,5 +1,3 @@
 class Post < ActiveRecord::Base
-
-	attr_accessor :title, :content
-
+	belongs_to :user
 end
