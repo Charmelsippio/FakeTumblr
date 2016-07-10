@@ -15,7 +15,7 @@
 			username: params[:user][:username],
 			password: params[:user][:password] })
 
-		redirect_to '/sign_in'
+		redirect_to '/sessions/sign_in'
   end
 
   def show
