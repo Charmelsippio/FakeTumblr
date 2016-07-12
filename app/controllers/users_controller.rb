@@ -20,7 +20,7 @@
 
   def show
   	@user = User.find(params[:id])
-    @posts = @user.posts #trying to get only the user's posts to show up. 
+    @posts = @user.posts #trying to get only the user's posts to show up.
 
       respond_to do |format|
         format.html

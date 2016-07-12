@@ -7,7 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><%= link_to 'Home', '/' %></li>
+      <li><%= link_to 'Profile', posts_url %></li>
+      <li><%= link_to 'New Post', posts_url %></li>
+    </ul>
+  </nav>
 
+  
 <%= yield %>
 
 </body>

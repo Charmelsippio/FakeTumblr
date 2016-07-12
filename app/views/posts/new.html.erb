@@ -1,17 +1,5 @@
 <h1>Posts Page</h1>
 
-<%= form_for @post, url: posts_new_path do |form| %>
-
-    <%= form.text_field :title, placeholder: "Title" %><br  />
-    <%= form.text_area :content, placeholder: "Content" %><br  />
-
-		<%= form.submit "Post" %>
+<%= render "form" %>
 
 
-
-
-
-
-
-
-<% end %>

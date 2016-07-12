@@ -7,3 +7,13 @@
 	<strong>Content:</strong>
 	<%= @post.content %>
 </p>
+
+<!-- list all comments -->
+
+<% if @post.comments.present? %>
+  <% @post.comments.each do |comment| %>
+    <p><%= comment.content %></p>
+  <% end %>
+<% end %>
+
+<%= render 'comments/comments' %>

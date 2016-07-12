@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 	  		redirect_to user_path(@user)
 	  	else 
 	  		flash[:alert] = "You have not logged in. Please try again"
-	  		redirect_to sign_in_path
+	  		redirect_to '/sessions/sign_in'
 	  	end
   end
 

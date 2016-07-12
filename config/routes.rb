@@ -11,25 +11,29 @@ Rails.application.routes.draw do
 
   get '/users/:id', to: 'users#show', as: 'user'
 
+  #Logout
   delete '/users/:id' => 'sessions#logout'
  
 #Posts Routes
-  get '/posts/new' => 'posts#new'
-  post '/posts/new' => 'posts#create'
+  resources :posts do
+     resources :comments
+  end
 
-  # post '/posts/index' => 'post#index'
+  # get '/posts/new' => 'posts#new'
+  # post '/posts/new' => 'posts#create' 
 
-  get '/posts/index' => 'posts#index'
-  get '/posts/:id', to: 'posts#show', as: :post
+  # get '/posts/:id/edit' => 'posts#edit', as: :edit_post
+  # patch '/posts/:id', to: 'posts#update'
 
-  delete '/posts/:id', to: 'posts#delete'
+  # get '/posts/index' => 'posts#index'
+  # get '/posts/:id', to: 'posts#show', as: :post
+
+  # delete '/posts/:id', to: 'posts#delete'
   
 
 
-
-
 #Comments Routes
-
+ 
 
 
 
